@@ -116,3 +116,74 @@
     transform: rotate(360deg);
   }
 }
+body {
+  z-index: 0;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+}
+.post {
+  margin-top: 50px;
+  width: 200px;
+  transition: 0.5s;
+  background-color: white;
+  list-style-type: none;
+  border: 2px solid black;
+  position: relative;
+}
+
+.post p {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.post:hover {
+  transform: scale(1.2);
+  z-index: 20;
+
+}
+
+.post:hover .postInfo{
+  display: block;
+  background-color: grey;
+  z-index: 20;
+  border: 2px solid black;
+  border-top: none;
+  margin-right: 10px;
+
+}
+
+.postInfo{
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+}
+
+
+img {
+  width: 100%;
+  height: 200px;
+  flex-grow: 1;
+}
+
+button {
+  margin-top: 5px;
+  font-size: 25px;
+  transition: 0.5s;
+  color: red;
+  border: none;
+  background: none;
+  
+}
+button:hover{
+  transform: scale(1.06);
+  
+};
