@@ -1,3 +1,4 @@
+/* Loading CSS Styling ripped from Stacked Overflow username: unknownA */
 .loading {
     display: block;
     position: fixed;
@@ -119,10 +120,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-body {
-  background-color: black;
-}
-
+/* Header CSS Styling */
 h1 {
   font-family: 'Lobster', cursive;
   color: white;
@@ -136,12 +134,16 @@ header p {
   -webkit-text-fill-color: transparent;
   width: 500px;
 }
+
+/* General CSS Styling */
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 
 }
+
+/* Spacetagram post CSS Styling */
 .post {
   margin-top: 50px;
   margin-left: 10px;
@@ -152,6 +154,10 @@ main {
   list-style-type: none;
   border: 2px solid white;
   position: relative;
+}
+
+.postTitle {
+  margin: 0 5px;
 }
 
 .post p {
@@ -165,13 +171,17 @@ h2 {
   height: 50px;
   align-self: center;
 }
-.postTitle {
-  margin: 0 5px;
-}
 
 .post:hover {
   transform: scale(1.2);
   z-index: 20;
+}
+
+.postInfo{
+  margin-top: -1px;
+  display: none;
+  position: absolute;
+  border: 2px solid white;
 }
 
 .post:hover .postInfo{
@@ -182,14 +192,6 @@ h2 {
   border-top: none;
   left: -2px;
 }
-
-.postInfo{
-  margin-top: -1px;
-  display: none;
-  position: absolute;
-  border: 2px solid white;
-}
-
 
 img {
   border-top: 2px solid white;
@@ -215,6 +217,7 @@ button:hover{
   transform: scale(1.06);
 };
 
+/* Footer CSS Styling */
 footer p {
   display: block;
 }

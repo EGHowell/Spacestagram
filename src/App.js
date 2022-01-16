@@ -45,11 +45,10 @@ function App() {
                   <li className="post" key = {index}>
                     <div key = {photo.title} id = {photo.title}>
                       <div className='postTitle'>
-                      <h2>{photo.title}</h2>
-                      <p>{photo.date} </p>
+                        <h2>{photo.title}</h2>
+                        <p>{photo.date} </p>
                       </div>
-                      
-                      <img src={photo.hdurl}/>
+                      <img src={photo.hdurl} alt={photo.explanation}/>
                       <div className='postData'>
                         <LikeButton />
                         <p className='postInfo'>{photo.explanation}</p>
