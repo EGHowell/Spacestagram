@@ -7,21 +7,18 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons'
 function LikeButton() {
     const [userLike, setUserLike] = useState(false)
 
-    const dislikeHeartButton = <FontAwesomeIcon icon={faHeart} />
-    const likeHeartButton = <FontAwesomeIcon icon={faHeartSolid} />
-
-
+    const likeHeartButton = <FontAwesomeIcon icon={faHeart} className='likeButton' />
+    const dislikeHeartButton = <FontAwesomeIcon icon={faHeartSolid} />
 
     const toggleClass = () => {
         setUserLike(!userLike);
     };
 
-
     return (
             
-            <button onClick={toggleClass}>
-                {userLike ? likeHeartButton : dislikeHeartButton }
-            </button>   
+        <button onClick={toggleClass}>
+            {userLike ? dislikeHeartButton : likeHeartButton }
+        </button>   
        
     )
 }

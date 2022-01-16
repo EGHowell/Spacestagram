@@ -1,11 +1,7 @@
 import './App.css';
-
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import LikeButton from './LikeButton'
-
-
-
 
 
 
@@ -25,27 +21,21 @@ function App() {
     }).then((response) => {
       setIsLoading(false);
       setNasaData(response.data.reverse());
-      
-      
     })
   }, [])
-
-  const newest = () => {
-    return nasaData.reverse()
-  }
 
 
   return (
     <div className="App">
 
-      <body className='wrapper'>
+      <body>
 
-        <header>
-          <h1>SPACESTAGRAM</h1>
+        <header className='wrapper'>
+          <h1>Spacetagram</h1>
           <p>Brought to you by NASA's Astronomy Photo of the Day (APOD) API</p>
         </header>
         
-        <main>
+        <main className='wrapper'>
           {
             isLoading ? <div className = "loading">Loading&#8230;</div> :
             nasaData.reverse().map(function(photo, index) {
@@ -54,16 +44,18 @@ function App() {
                 
                   <li className="post" key = {index}>
                     <div key = {photo.title} id = {photo.title}>
+                      <div className='postTitle'>
                       <h2>{photo.title}</h2>
                       <p>{photo.date} </p>
+                      </div>
+                      
                       <img src={photo.hdurl}/>
                       <div className='postData'>
                         <LikeButton />
                         <p className='postInfo'>{photo.explanation}</p>
                       </div>
                     </div>
-                  </li> 
-                   
+                  </li>  
               )
             })
           }
@@ -74,6 +66,7 @@ function App() {
             &copy; Eric Howell 2022
           </p>
         </footer>
+        
       </body>
       
     </div>
