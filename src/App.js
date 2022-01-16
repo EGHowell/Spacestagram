@@ -16,7 +16,7 @@ function App() {
       dataResponse: 'json',
       params: {
         api_key: 'CT3naHr22Inc0Dye93NCJK9GIAXoaHdxl2i0jUM7',
-        start_date: '2022-01-01'
+        start_date: '2022-01-11'
       }
     }).then((response) => {
       setIsLoading(false);
